@@ -7,7 +7,7 @@ import java.util.TreeSet;
 public class ConjuntoComportado {
     public static void main(String[] args) {
         Set<String> listaAprovados = new HashSet<>(); //Mostra por ordem de inserção
-        listaAprovados.add("Lista");
+        listaAprovados.add("ListaList");
         listaAprovados.add("Ana");
         listaAprovados.add("Carlos");
         listaAprovados.add("Lucca");
