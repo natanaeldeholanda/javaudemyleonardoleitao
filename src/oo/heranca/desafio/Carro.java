@@ -2,35 +2,46 @@ package oo.heranca.desafio;
 
 public class Carro {
 
-    final int VELOCIDADE_MAXIMA;
-    int velocidadeAtual;
-    int boost = 10;
+    public final int VELOCIDADE_MAXIMA;
+    protected int velocidadeAtual;
+    private int boost = 10;
 
-    Carro(int velocidadeMaxima) {
+    protected Carro(int velocidadeMaxima) {
         this.VELOCIDADE_MAXIMA = velocidadeMaxima;
+    }
+
+    public void acelerar() {
+        if (velocidadeAtual + getBoost() > VELOCIDADE_MAXIMA) {
+            velocidadeAtual = VELOCIDADE_MAXIMA;
+        } else {
+            velocidadeAtual += getBoost();
+        }
     }
 
     @Override
     public String toString() {
         return "Carro{" +
-                "velocidadeAtual=" + VELOCIDADE_MAXIMA +
+                "VELOCIDADE_MAXIMA=" + VELOCIDADE_MAXIMA +
+                ", velocidadeAtual=" + velocidadeAtual +
+                ", boost=" + boost +
                 '}';
     }
 
-    void acelerar() {
-        if (velocidadeAtual + boost > VELOCIDADE_MAXIMA) {
-            velocidadeAtual = VELOCIDADE_MAXIMA;
-        } else {
-            velocidadeAtual += boost;
-        }
+    public int getBoost() {
+        return boost;
     }
 
-    void frear() {
+    public void setBoost(int boost) {
+        this.boost = boost;
+    }
+
+    public void frear() {
         if (velocidadeAtual >= 10) {
             velocidadeAtual -= 10;
         } else {
             velocidadeAtual = 0;
         }
+
 
     }
 }

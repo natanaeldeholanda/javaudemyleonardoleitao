@@ -19,11 +19,11 @@ public class Heroi extends Jogador {
 
     //Vai atacar mais forte que o mostro.
 
-    Heroi(int x, int y) {
+    public Heroi(int x, int y) {
         super(x, y);
     }
 
-    boolean atacar(Jogador oponente) {
+    public boolean atacar(Jogador oponente) {
         boolean atacar1 = super.atacar(oponente);
         boolean atacar2 = super.atacar(oponente);
         return atacar1 || atacar2;
