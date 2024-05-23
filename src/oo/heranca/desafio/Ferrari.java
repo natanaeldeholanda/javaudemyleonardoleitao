@@ -34,6 +34,7 @@ public class Ferrari extends Carro implements Esportivo, Luxo {
         ligarArcondicionado = false;
     }
 
+
     @Override
     public int getBoost() {
         if (ligarTurbo && !ligarArcondicionado) {

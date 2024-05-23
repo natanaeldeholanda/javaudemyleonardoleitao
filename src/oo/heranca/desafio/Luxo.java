@@ -1,6 +1,12 @@
 package oo.heranca.desafio;
 
 public interface Luxo {
-    void ligarArcondicionado();
-    void desligarArcondicionado();
+    public void ligarArcondicionado();
+    abstract void desligarArcondicionado();
+
+
+    //Em interface é possível fazer uma implementação padrão, não é forçado a criar o mẽtodo na classe;
+    default int velocidadeDoAr(){
+        return 1;
+    }
 }
