@@ -16,6 +16,7 @@ public class CarroDesafioTeste {
         System.out.println("Velocidade Lamborghini: " + lamborghini);
 
         Ferrari ferrari2 = new Ferrari(300);
+        System.out.println(ferrari2.velocidadeDoAr());
         ferrari2.acelerar();
         ferrari2.acelerar();
         ferrari2.ligarTurbo();
