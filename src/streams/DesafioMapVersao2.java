@@ -15,7 +15,7 @@ public class DesafioMapVersao2 {
 
         System.out.println("Passo 1: Converter para String binária");
         nums.stream()
-                .map(Integer::toBinaryString)
+                .map(Integer::toBinaryString) //Usando method reference;
                 .forEach(System.out::println);
         System.out.println("--------------------------");
         System.out.println("Passo 2: Inverter a String binária");
@@ -31,8 +31,7 @@ public class DesafioMapVersao2 {
         nums.stream()
                 .map(Integer::toBinaryString)
                 .map(s -> new StringBuilder(s).reverse().toString())
-                .map(s -> Integer.parseInt(s, 2))
-                .forEach(System.out::println);
+                .map(s -> Integer.parseInt(s, 2)).forEach(System.out::println);
         /*
         Neste código, usamos a função Integer.toBinaryString para converter os números inteiros para suas
         representações binárias em formato de String. Em seguida, invertemos a String binária e a convertemos de volta
