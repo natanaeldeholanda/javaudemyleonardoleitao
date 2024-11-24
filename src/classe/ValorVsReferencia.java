@@ -17,8 +17,8 @@ public class ValorVsReferencia {
 		d1.dia = 31;
 		d1.mes = 12;
 		
-		System.out.println(d1.mostrarData());
-		System.out.println(d2.mostrarData());
+		System.out.println(d1.mostrarDataFormatada());
+		System.out.println(d2.mostrarDataFormatada());
 		
 	}
 

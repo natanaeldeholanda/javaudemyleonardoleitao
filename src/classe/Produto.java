@@ -22,9 +22,9 @@ public class Produto {
 	double precoComDesconto() {
 		return preco * (1 - desconto);
 	}
-
+	//Sobrescrevendo o metodo incluindo o parametro descontoGerente;
 	double precoComDesconto(double descontoGerente) {
-		return preco * (1 - desconto - descontoGerente);
+		return preco * (1 - (desconto + descontoGerente));
 	}
 
 }

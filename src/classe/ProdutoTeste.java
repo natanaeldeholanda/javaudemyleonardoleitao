@@ -17,9 +17,11 @@ public class ProdutoTeste {
 		double precoFinal1 = p1.precoComDesconto();
 		double precoFinal2 = p2.precoComDesconto();
 		double medicaCarrinho = (precoFinal1 + precoFinal2) / 2;
+		double medicaCarrinhoDescontoGerente = (precoFinal1 + precoFinal2) / 2;
+
 		
-		
-		System.out.printf( "Média do carrinho = R$%.2f", medicaCarrinho);
+		System.out.printf( "Média do carrinho = R$%.2f\n", medicaCarrinho);
+		System.out.printf("Preço do Notebook com o desconto do Gerente -> R$%.2f", p1.precoComDesconto(0.15));
 	}
 
 }

@@ -19,13 +19,12 @@ public class Data {
 		this.ano = ano;
 	}
 
-	// Criação do método mostrar data. Todo método é representado por (){
-	// } -> EX: mostrarMetodo(){
+	// Criação do méeodo mostrar data, Todo metodo eh representado por (){} -> EX: mostrarMetodo(){}
 	// Local onde é inserido os parâmetros.
 //}
-	String mostrarData() {
+	String mostrarDataFormatada() {
 		return String.format("%d/%d/%d", dia, mes, ano);
-		// Esse é o método que tem que ser usado em uma aplicação desktop!
+		// Esse é o metodo que tem que ser usado em uma aplicação desktop!
 	}
 
 }
