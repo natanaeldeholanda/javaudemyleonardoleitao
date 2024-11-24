@@ -12,6 +12,7 @@ public class ProdutoTeste {
 		
 		System.out.println(p1.nome + " -> R$" + p1.precoComDesconto());
 		System.out.println(p2.nome + " -> R$" + p2.precoComDesconto());
+
 		
 		double precoFinal1 = p1.precoComDesconto();
 		double precoFinal2 = p2.precoComDesconto();
