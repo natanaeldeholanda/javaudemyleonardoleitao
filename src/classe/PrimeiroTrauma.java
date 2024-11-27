@@ -11,7 +11,7 @@ public class PrimeiroTrauma {
 		//forma essa que tem que instanciar um novo
 		// objeto
 
-		PrimeiroTrauma p = new PrimeiroTrauma();
+		PrimeiroTraumaVersao2 p = new PrimeiroTraumaVersao2();
 		System.out.println(p.b); 
 
 		// pode mexer aqui

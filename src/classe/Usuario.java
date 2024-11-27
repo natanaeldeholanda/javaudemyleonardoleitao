@@ -5,13 +5,13 @@ public class Usuario {
     String email;
 
     @Override
-    //Sobrescrevendo o método equals para comparar 2 objetos
+    //Sobrescrevendo o metodo equals para comparar 2 objetos
     public boolean equals(Object objeto) {
         if (objeto instanceof Usuario) {
             Usuario outro = (Usuario) objeto;
             boolean nomeIgual = outro.nome.equals(this.nome);
             boolean emailIgual = outro.email.equals(this.email);
-            return super.equals(objeto);
+            return nomeIgual && emailIgual;
         } else {
             return false;
         }

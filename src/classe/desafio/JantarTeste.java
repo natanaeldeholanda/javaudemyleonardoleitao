@@ -1,6 +1,6 @@
 package classe.desafio;
 
-public class Jantar {
+public class JantarTeste {
 
 	public static void main(String[] args) {
 		Comida arroz = new Comida ("Arroz", 0.233);
