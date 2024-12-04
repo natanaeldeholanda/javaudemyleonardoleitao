@@ -24,20 +24,20 @@ public class Exercicio {
 		System.out.println(Arrays.toString(notasAlunoA)); // Imprimindo arrays, dessa forma sai a quantidade atribuida.
 		
 		//percorrendo array, com a notação ponto length
+
 		double totalAlunoA = 0;
 		for(int i = 0; i < notasAlunoA.length; i++) {
 			totalAlunoA += notasAlunoA[i];
-			
+
 		}
 		System.out.println("A média do aluno A é: " + totalAlunoA/notasAlunoA.length);
 		
 		// Outra forma de declarar array, inicializando as notas diretamente, porém é menos usado.
 		double [] notasAlunoB = { 6.9, 8.9, 5.5, 10 }; 
 		double totalAlunoB = 0;
-		for (int j = 0; j < notasAlunoB.length; j++) {
-			totalAlunoB += notasAlunoB[j];
+		for (double nota : notasAlunoB) {
+			totalAlunoB += nota;
 		}
 		System.out.println("A média do aluno B é: " +totalAlunoB/notasAlunoB.length);
 	}
-
 }
