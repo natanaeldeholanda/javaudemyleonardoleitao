@@ -18,6 +18,7 @@ public class CarroTeste {
         carro1.frear();
         carro1.frear();
         carro1.frear();
+        carro1.desligar();
         //Faltou encapsulamento
         //carro1.motor.fatorInjecao = -30;
         System.out.println(carro1.motor.giros());

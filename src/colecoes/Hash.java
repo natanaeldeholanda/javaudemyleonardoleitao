@@ -8,6 +8,7 @@ public class Hash {
         usuarios.add(new Usuario("Ana", 25));
         usuarios.add(new Usuario("Pedro", 23));
         usuarios.add(new Usuario("Rafaela",28));
-        System.out.println(usuarios.contains(new Usuario("Ana",25)));
+        boolean resultado = usuarios.contains(new Usuario("Ana",25));
+        System.out.println(resultado);
     }
 }

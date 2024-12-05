@@ -3,7 +3,7 @@ package oo.composicao;
 public class Carro {
     final Motor motor;
 
-    Carro(){
+    Carro() {
         this.motor = new Motor(this);
     }
 
@@ -20,10 +20,12 @@ public class Carro {
     }
 
     void ligar() {
+        System.out.println("Ligando motor...");
         motor.ligado = true;
     }
 
     void desligar() {
+        System.out.println("Desligando motor...");
         motor.ligado = false;
     }
 

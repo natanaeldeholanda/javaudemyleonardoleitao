@@ -4,35 +4,44 @@ package colecoes;
 import java.util.HashSet;
 import java.util.Set;
 
-@SuppressWarnings("ALL")
+/*
+---*** HashSet ***---:
+Pode ser heterogêneo;
+Pode ser homogêneo;
+Pode ser ordenado;
+Não aceita objetos duplicados;
+Não é indexado
+ */
+@SuppressWarnings("all")
 public class ConjuntoBaguncado {
     public static void main(String[] args) {
-        HashSet conjuntoBaguncado = new HashSet();
-        conjuntoBaguncado.add("A");
-        conjuntoBaguncado.add("B");
-        conjuntoBaguncado.add("C");
-        conjuntoBaguncado.add(123);
-        conjuntoBaguncado.add(true);
-        conjuntoBaguncado.add('x');
-        conjuntoBaguncado.add(1.2);
+        HashSet conjunto = new HashSet();
+        conjunto.add(1.2); // double -> Double
+        conjunto.add(true); // boolean -> Boolean
+        conjunto.add("Teste");
+        conjunto.add(1);
+        conjunto.add('x');
+        System.out.println("Tamanho é " + conjunto.size());
+        conjunto.add("teste");
+        conjunto.add('X');
+        System.out.println("Tamanho é " + conjunto.size());
+        System.out.println(conjunto.remove("teste"));
+        System.out.println(conjunto.remove("Teste"));
+        System.out.println(conjunto.remove('x'));
+        System.out.println("Tamanho é " + conjunto.size());
 
-        System.out.println("Tamanho do HashSet: " + conjuntoBaguncado.size());
-        System.out.println("Verifica se tem do HashSet: " + conjuntoBaguncado.contains(123));
+        System.out.println(conjunto.contains('x'));
+        System.out.println(conjunto.contains(1));
+        System.out.println(conjunto.contains(false));
 
         Set nums = new HashSet();
-        nums.add(123);
-        nums.add(456);
-        nums.add(789);
-        System.out.println(nums);
-        System.out.println(conjuntoBaguncado);
-        //União dos dois conjuntos
-        conjuntoBaguncado.addAll(nums);
-        System.out.println(conjuntoBaguncado);
-        //Mostra os valores em comum
-        conjuntoBaguncado.retainAll(nums);
-        System.out.println(conjuntoBaguncado);
-        conjuntoBaguncado.clear();
-        System.out.println(conjuntoBaguncado);
-
+        nums.add(1);
+        nums.add(2);
+        nums.add(3);
+        conjunto.addAll(nums); // União entre dois conjuntos
+        conjunto.retainAll(nums); // Interseção entre dois conjuntos
+        System.out.println(conjunto);
+        conjunto.clear();
+        System.out.println(conjunto);
     }
 }

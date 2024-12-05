@@ -5,10 +5,11 @@ import java.util.ArrayList;
 //RELACIONAMENTO UM PRA N -> ONE TO MANY
 public class Compra {
     String cliente;
-    ArrayList<Item> adicionarItem = new ArrayList<Item>();
+    ArrayList<Item> itens = new ArrayList<Item>();
+
     //MÉTODOS PARA MANTER UMA RELAÇÃO BIDIRECIONAL CONSISTENTE
     void adicionarItem(Item item) {
-        adicionarItem.add(item);
+        itens.add(item);
         item.compra = this;
     }
     //MÉTODOS PARA MANTER UMA RELAÇÃO BIDIRECIONAL CONSISTENTE
@@ -18,7 +19,7 @@ public class Compra {
 
     double getValorTotal() {
         double total = 0;
-        for (Item item : adicionarItem) {
+        for (Item item : itens) {
             total += item.quantidade * item.preco;
         }
         return total;

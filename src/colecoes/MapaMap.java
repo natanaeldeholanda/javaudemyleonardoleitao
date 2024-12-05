@@ -6,32 +6,33 @@ import java.util.Map;
 public class MapaMap {
     public static void main(String[] args) {
         Map<Integer, String> usuarios = new HashMap<>();
-        usuarios.put(14, "Roberto");
-        usuarios.put(20, "Rafaela");
-        usuarios.put(31, "Rebecca");
+        usuarios.put(1, "Roberto");
+        usuarios.put(2, "Ricardo");
+        usuarios.put(3, "Rafaela");
+        usuarios.put(4, "Rebeca");
         System.out.println(usuarios.size());
         System.out.println(usuarios.isEmpty());
-        System.out.println(usuarios.keySet());
-        System.out.println(usuarios.values());
-        System.out.println(usuarios.entrySet());
-        System.out.println(usuarios.containsKey(13));
-        System.out.println(usuarios.containsValue("Rebecca"));
-        System.out.println(usuarios.get(31));
-        System.out.println(usuarios.remove(14, "Rafaela"));
-        System.out.println("-----------------");
-        //Percorer elementos do MAp
-        for(int chave : usuarios.keySet()) {
+        System.out.println(usuarios.keySet()); // Retorna as chaves, e não ordena;
+        System.out.println(usuarios.values()); // Retorna os valores, e não ordena;
+        System.out.println(usuarios.entrySet()); // Retorna chave e valor, e não ordena;
+        System.out.println(usuarios.containsKey(20));
+        System.out.println(usuarios.containsValue("Rebeca"));
+        System.out.println(usuarios.get(3));
+        System.out.println(usuarios.remove(1));
+        System.out.println(usuarios.remove(4, "Gui"));
+
+        System.out.println("---***---");
+        for (int chave : usuarios.keySet()) {
             System.out.println(chave);
         }
-        System.out.println("-----------------");
+        System.out.println("---***---");
         for(String valor : usuarios.values()) {
             System.out.println(valor);
         }
-        System.out.println("-----------------");
-
-        for(Map.Entry<Integer, String> usuario : usuarios.entrySet()) {
-            System.out.println(usuario.getKey() + " - " + usuario.getValue());
+        System.out.println("---***---");
+        for (Map.Entry<Integer, String> registro : usuarios.entrySet()) {
+            System.out.print(registro.getKey() + " ==> ");
+            System.out.println(registro.getValue());
         }
-
     }
 }
