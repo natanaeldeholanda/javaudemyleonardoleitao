@@ -1,8 +1,8 @@
 package lambdas;
 
-public class Somar implements Calculo {
+public class Dividir implements Calculo {
     @Override
     public double executar(double a, double b) {
-        return a + b;
+        return a / b;
     }
 }

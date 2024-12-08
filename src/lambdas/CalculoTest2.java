@@ -2,7 +2,7 @@ package lambdas;
 
 public class CalculoTest2 {
     public static void main(String[] args) {
-        //Implementando o método executar, via lambida;
+        //Implementando o metodo executar, via lambida;
         Calculo somar = (a, b) -> {
             return a + b;
         };
