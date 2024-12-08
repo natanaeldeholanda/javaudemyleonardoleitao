@@ -43,13 +43,13 @@ public class Ferrari extends Carro implements Esportivo, Luxo {
             return 30;
 
         } else if (!ligarTurbo && !ligarArcondicionado) {
-            return 25;
+            return 20;
         } else {
             return 15;
         }
     }
 
-    //Sobrescrevendo o método acelerar da classe carro, pra dar o turbo a ferrari
+    //Sobrescrevendo o metodo acelerar da classe carro, pra dar o turbo a ferrari
     // nunca poderá diminuir o nível de visibilidade, porém aumentar pode
 //    @Override
 //    void acelerar() {

@@ -2,7 +2,7 @@ package oo.heranca;
 
 public class Heroi extends Jogador {
 
-   //Sobrescrevendo o método criado na classe jogador, pra dizer que agora, o heroi
+   //Sobrescrevendo o metodo criado na classe jogador, pra dizer que agora, o heroi
 //   boolean atacar(Jogador oponente) {
 //       int deltaX = Math.abs(x - oponente.x);
 //       int deltaY = Math.abs(y - oponente.y);
@@ -18,7 +18,6 @@ public class Heroi extends Jogador {
 //   }
 
     //Vai atacar mais forte que o mostro.
-
     public Heroi(int x, int y) {
         super(x, y);
     }

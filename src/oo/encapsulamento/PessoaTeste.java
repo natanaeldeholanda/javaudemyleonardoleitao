@@ -7,5 +7,6 @@ public class PessoaTeste {
         System.out.println(p1.getIdade());//ler
         System.out.println(p1);//toString
         System.out.println(p1.nomeCompleto());//toString nomeCompleto
+        System.out.println(p1.getSobrenome());
     }
 }

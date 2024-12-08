@@ -6,7 +6,7 @@ public class Pessoa {
     public Pessoa(double peso) {
         setPeso(peso);
     }
-    //Método, não precisa usar o extends pois pessoa não é comida
+    //Metodo, não precisa usar o extends pois pessoa não é comida
     public void comer(Comida comida) {
         this.peso += comida.getPeso();
     }

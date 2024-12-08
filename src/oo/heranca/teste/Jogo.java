@@ -20,6 +20,7 @@ public class Jogo {
         heroi.andar(Direcao.NORTE);
         heroi.atacar(monstro);
         heroi.atacar(monstro);
+        heroi.atacar(monstro);
 
         System.out.println("Life Heroi após ataque: " + heroi.life);
         System.out.println("Life Monstro após ataque: " + monstro.life);//Mostrou 20 a menos, pois o ataque do heroi é 20;

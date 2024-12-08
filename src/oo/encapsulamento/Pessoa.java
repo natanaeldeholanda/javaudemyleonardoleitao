@@ -1,8 +1,9 @@
 package oo.encapsulamento;
 
+@SuppressWarnings("ALL")
 public class Pessoa {
     private String nome;
-    private String sobrenome;
+    private final String sobrenome;
     private int idade;
 
     public Pessoa(String nome, String sobrenome, int idade) {
@@ -13,7 +14,7 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "Olá, me chamo " + nome + " e tenho " + idade + "anos.";
+        return "Olá, me chamo " + nome + " e tenho " + idade + " anos.";
     }
 
     public String getSobrenome() {

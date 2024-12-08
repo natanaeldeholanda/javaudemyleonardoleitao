@@ -21,9 +21,9 @@ public class Carro {
     @Override
     public String toString() {
         return "Carro{" +
-                "VELOCIDADE_MAXIMA=" + VELOCIDADE_MAXIMA +
-                ", velocidadeAtual=" + velocidadeAtual +
-                ", boost=" + boost +
+                "Velocidade Máxima=" + VELOCIDADE_MAXIMA +
+                ", Velocidade Atual=" + velocidadeAtual +
+                ", Boost=" + boost +
                 '}';
     }
 

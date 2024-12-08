@@ -20,6 +20,7 @@ public class CarroDesafioTeste {
         ferrari2.acelerar();
         ferrari2.acelerar();
         ferrari2.ligarTurbo();
-        System.out.println("Velocidade Ferrari2: " + ferrari2);
+        ferrari2.desligarTurbo();
+        System.out.println("Velocidade Ferrari 2: " + ferrari2);
     }
 }
