@@ -35,6 +35,5 @@ public class Threads {
                 throw new RuntimeException(e);
             }
         }
-
     }
 }

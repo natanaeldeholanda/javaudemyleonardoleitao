@@ -1,5 +1,5 @@
 package lambdas;
-@FunctionalInterface
+@FunctionalInterface // Interface funcional só pode ter um metodo abstrato
 public interface Calculo {
     double executar(double a, double b);
 
