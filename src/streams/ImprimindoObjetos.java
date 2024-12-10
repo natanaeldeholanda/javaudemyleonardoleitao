@@ -8,19 +8,20 @@ import java.util.stream.Stream;
 public class ImprimindoObjetos {
 
     public static void main(String[] args) {
-        List<String> aprovados = Arrays.asList("Lu", "Gui", "Ana", "Mel");
-        System.out.println("Usando o foreach: ");
-        for (String aprovado : aprovados) {
-            System.out.println(aprovado);
+        List<String> aprovados = Arrays.asList("Ana", "Bia", "Lia", "Gui");
+        System.out.println("Usando o método forEach...");
+        for (String nome : aprovados) {
+            System.out.printf(" | " + nome + " | ");
         }
-        System.out.println("\nUsando Iterator: ");
+        System.out.println("\n\n Usando Iterator...");
         Iterator<String> iterator = aprovados.iterator();
-        while (iterator.hasNext()) {
-            System.out.println(iterator.next());
+        while (iterator.hasNext()){
+            System.out.printf(" | " + iterator.next() + " | " );
         }
-        System.out.println("\nUsando Stream: ");
+        System.out.println("\n\n Usando Stream...");
         Stream<String> stream = aprovados.stream();
-        stream.forEach(System.out::println); //Laço interno;
+//        stream.forEach(nome -> System.out.printf(" | " + nome + " | ")); // Para imprimir na mesma linha, formatado
+        stream.forEach(System.out::println); // Para imprimir cada elemento em uma linha, ou seja, laço interno
     }
 }
 

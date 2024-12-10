@@ -7,17 +7,21 @@ import java.util.function.Predicate;
 
 public class Filter {
     public static void main(String[] args) {
-        Aluno a1 = new Aluno("Ana", 7.8);
-        Aluno a2 = new Aluno("Rebecca", 9.7);
-        Aluno a3 = new Aluno("Eduardo Carmo", 5.6);
-        Aluno a4 = new Aluno("Jéssica", 8.8);
-        Aluno a5 = new Aluno("Natanael", 8.5);
-        Aluno a6 = new Aluno("Darlysson", 6.8);
+        Aluno a1 = new Aluno("Ana", 7.8, true);
+        Aluno a2 = new Aluno("Rebecca", 7.7, false);
+        Aluno a3 = new Aluno("Eduardo Carmo", 7.6, false);
+        Aluno a4 = new Aluno("Jéssica", 9.8, true);
+        Aluno a5 = new Aluno("Natanael", 9.8, true);
+        Aluno a6 = new Aluno("Darlysson", 6.8, false);
 
-        List<Aluno> alunos = Arrays.asList(a1, a2, a3, a4, a5,a6);
-        Predicate<Aluno> aprovado = aluno -> aluno.nota >= 6;
-        Function<Aluno, String> saudacaoAprovados = aluno -> "Parabéns!!! " + aluno.nome + " você foi aprovado(a)!";
-        //Usando o filter pra pegar os alunos que foram aprovados com média maior que 6;
-        alunos.stream().filter(aprovado).map(saudacaoAprovados).forEach(System.out::println);
+        List<Aluno> alunos = Arrays.asList(a1, a2, a3, a4, a5, a6);
+        Predicate<Aluno> estaAprovado = a -> a.nota >= 7 && a.bomComportamento;
+        Predicate<Aluno> temBomComportamento = a -> a.bomComportamento;
+        Function<Aluno, String> saldacao = a -> "Parabéns " + a.nome + "! Você foi aprovado(a) com nota " + a.nota + " e teve bom comportamento!!!";
+        alunos.stream()
+                .filter(estaAprovado)
+                .filter(temBomComportamento)
+                .map(saldacao)
+                .forEach(System.out::println);
     }
 }
