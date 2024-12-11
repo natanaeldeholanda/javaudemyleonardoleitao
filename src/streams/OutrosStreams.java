@@ -2,6 +2,7 @@ package streams;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class OutrosStreams {
     public static void main(String[] args) {
@@ -14,6 +15,7 @@ public class OutrosStreams {
         Aluno aluno7 = new Aluno("Isis", 8.1);
         Aluno aluno8 = new Aluno("Gabriel", 7);
         List<Aluno> alunos = Arrays.asList(aluno1, aluno2, aluno3, aluno4, aluno5, aluno6, aluno7, aluno8);
+//        Consumer<Object> imprimir = System.out::println; -> Metodo para imprimir
         System.out.println("Distinct -> Não pega valores duplicados (necessita equals e hashCode)");
         alunos.stream().distinct().forEach(System.out::println);
         System.out.println("-----------------");
@@ -21,7 +23,7 @@ public class OutrosStreams {
         alunos.stream().skip(2).limit(4).forEach(System.out::println);
         System.out.println("-----------------");
         System.out.println("takeWhile -> Pega valores de acordo com a lógica");
-        alunos.stream().takeWhile(a -> a.nota >= 6).forEach(System.out::println);
+        alunos.stream().takeWhile(a -> a.nota > 7).forEach(System.out::println);
 
     }
 }

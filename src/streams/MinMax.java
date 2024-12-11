@@ -16,7 +16,6 @@ public class MinMax {
             if (a1.nota < a2.nota) return -1;
             return 0;
         };
-
         System.out.println(alunos.stream().max(melhorNota).get());
         System.out.println(alunos.stream().min(melhorNota).get());
     }

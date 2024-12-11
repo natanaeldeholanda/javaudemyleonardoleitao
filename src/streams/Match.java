@@ -12,7 +12,7 @@ public class Match {
         Aluno aluno4 = new Aluno("Giseuda", 5);
         List<Aluno> alunos = Arrays.asList(aluno1, aluno2, aluno3, aluno4);
 
-        Predicate<Aluno> aprovado = a -> a.nota >= 6;
+        Predicate<Aluno> aprovado = a -> a.nota >= 7;
         Predicate<Aluno> reprovado = aprovado.negate();
 
         System.out.println("Todos foram aprovados? " + alunos.stream().allMatch(aprovado)); //Retorna se todas as instâncias foram aprovadas;
