@@ -1,32 +1,29 @@
 package excecao;
 
 public class ChecadaVsNaoChecada {
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception {
         try {
             geraErro1();
-        } catch (Exception e) {
+        } catch (RuntimeException e) {
             System.out.println(e.getMessage());
         }
         try {
             geraErro2();
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
-        System.out.println("Fim do programa");
+
+        //Não basta estanciar o erro, tem que chamar através do throw!!!
+
     }
 
-    //Não basta estanciar o erro, tem que chamar através do throw!!!
-    // Não checada ou não verifica
+    // Exceção NÃO checada ou NÃO verificada
     static void geraErro1() {
-        throw new RuntimeException("Ocorreu o Erro 1");
+        throw new RuntimeException("Ocorreu um erro bem legal #01!");
     }
 
-    // Exceção checada ou verificada
+    //Exceção checada ou verificada
     static void geraErro2() throws Exception {
-        try {
-            throw new Exception("Ocorreu o Erro 2");
-        } catch (Exception e) {
-            System.out.println("Excecao geraErro2");
-        }
+        throw new Exception("Ocorreu um erro bem legal #02!");
     }
 }

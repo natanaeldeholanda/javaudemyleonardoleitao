@@ -24,6 +24,5 @@ public class OutrosStreams {
         System.out.println("-----------------");
         System.out.println("takeWhile -> Pega valores de acordo com a lógica");
         alunos.stream().takeWhile(a -> a.nota > 7).forEach(System.out::println);
-
     }
 }
